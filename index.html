@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vercel Bank | Professional Business & CPA Banking</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- TOP ALERT BANNER (Security Status) -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <span class="status-indicator"><span class="dot"></span> Secure Banking Network Active</span>
+      <span class="compliance-text">Member FDIC • Equal Housing Lender • TLS 1.3 Encryption</span>
+    </div>
+  </div>
+
+  <!-- MAIN NAVIGATION -->
+  <header class="main-header">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <span class="logo-accent">VERCEL</span>
+        <span class="logo-main">BANK</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#calculator" class="nav-link">Treasury Tool</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#credibility" class="nav-link">Trust</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn btn-secondary" id="openLoginBtn">Sign In</button>
+        <button class="btn btn-primary" id="openConsultationBtn">Schedule consultation</button>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="badge">Specialized Business & CPA Banking</div>
+          <h1 class="hero-title">Global financial services built for businesses and individuals.</h1>
+          <p class="hero-description">
+            Experience a secure, digital-first banking partner that delivers sophisticated treasury management, robust compliance capabilities, and dedicated financial expertise tailored for professional service providers and corporate leaders.
+          </p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary btn-lg" id="heroConsultationBtn">Schedule a Consultation</button>
+            <a href="#services" class="btn btn-outline btn-lg">Explore Corporate Services</a>
+          </div>
+          <div class="hero-trust-indicators">
+            <div class="trust-indicator-item">
+              <strong>$2.4B+</strong>
+              <span>Assets Under Management</span>
+            </div>
+            <div class="trust-divider"></div>
+            <div class="trust-indicator-item">
+              <strong>15k+</strong>
+              <span>CPA & Corporate Clients</span>
+            </div>
+            <div class="trust-divider"></div>
+            <div class="trust-indicator-item">
+              <strong>100%</strong>
+              <span>FDIC Insurance Eligible</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="visual-card-wrapper">
+            <div class="secure-shield-pulse">
+              <div class="shield-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              </div>
+            </div>
+            <div class="floating-banking-card shadow-lg">
+              <div class="card-header-v">
+                <span class="brand">VERCEL BANK</span>
+                <span class="chip"></span>
+              </div>
+              <div class="card-body-v">
+                <p class="card-label">CORPORATE CLIENT</p>
+                <p class="card-number">•••• •••• •••• 8821</p>
+              </div>
+              <div class="card-footer-v">
+                <span>CPA PLATINUM PREFERRED</span>
+                <span class="logo-icon-s">VB</span>
+              </div>
+            </div>
+            <div class="live-indicator-card shadow-md">
+              <div class="live-indicator-header">
+                <span class="live-dot"></span>
+                <span class="live-label">Active Operations</span>
+              </div>
+              <div class="live-metric">
+                <span class="metric-label">Treasury Yield (APY)</span>
+                <span class="metric-value">5.42%</span>
+              </div>
+              <div class="live-bar-graph">
+                <div class="bar" style="height: 40%"></div>
+                <div class="bar" style="height: 55%"></div>
+                <div class="bar" style="height: 75%"></div>
+                <div class="bar" style="height: 90%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST HIGHLIGHT / PARTNERS LOGO STRIP -->
+    <section class="partner-strip">
+      <div class="container">
+        <p class="strip-title">TRUSTED BY LEADING CPA FIRMS, ENTERPRISES, AND FINANCIAL ADVISORS NATIONWIDE</p>
+        <div class="partner-logos">
+          <span class="partner-logo">APEX PARTNERS</span>
+          <span class="partner-logo">VERITAS CPA</span>
+          <span class="partner-logo">BEACON WEALTH</span>
+          <span class="partner-logo">KRONOS HOLDINGS</span>
+          <span class="partner-logo">INTEGRITY TAX</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT ECOSYSTEM SECTION -->
+    <section class="ecosystem-section" id="services">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle">The Vercel Advantage</span>
+          <h2 class="section-title">Comprehensive Banking Suite</h2>
+          <p class="section-lead">A robust institutional framework optimized to reduce administrative complexity and maximize operational efficiency.</p>
+        </div>
+
+        <!-- Ecosystem Tabs -->
+        <div class="ecosystem-tabs">
+          <button class="tab-btn active" data-tab="business">Business Banking</button>
+          <button class="tab-btn" data-tab="cpa">CPA & Accounting</button>
+          <button class="tab-btn" data-tab="personal">Personal & Wealth</button>
+          <button class="tab-btn" data-tab="digital">Digital Platforms</button>
+        </div>
+
+        <!-- Tab Content Containers -->
+        <div class="tab-content-wrapper">
+          <!-- BUSINESS BANKING -->
+          <div class="tab-pane active" id="tab-business">
+            <div class="tab-grid">
+              <div class="tab-info">
+                <h3 class="tab-pane-title">Tailored Commercial Banking Solutions</h3>
+                <p class="tab-pane-desc">Equip your business with the capital infrastructure and liquidity workflows necessary for resilient operations and rapid scaling.</p>
+                <ul class="bullet-list">
+                  <li>High-Yield Enterprise Savings Accounts with premium rates</li>
+                  <li>Multi-entity sub-account architecture for precise balance sheet tracking</li>
+                  <li>Commercial Lines of Credit & customized term loan facilities</li>
+                  <li>SBA 7(a) and 504 loan programs with expedited underwriting</li>
+                </ul>
+                <button class="btn btn-primary open-consultation-trigger">Request Business Consultation</button>
+              </div>
+              <div class="tab-cards-container">
+                <div class="feature-card-item">
+                  <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                    </svg>
+                  </div>
+                  <h4 class="feature-card-title">Optimized Treasury Yield</h4>
+                  <p class="feature-card-text">Automatically sweep excess operating cash into high-yield accounts to maximize return without sacrificing Liquidity.</p>
+                </div>
+                <div class="feature-card-item">
+                  <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="4" width="20" height="16" rx="2" />
+                      <line x1="12" y1="4" x2="12" y2="20" />
+                    </svg>
+                  </div>
+                  <h4 class="feature-card-title">Multi-Account Management</h4>
+                  <p class="feature-card-text">Establish secure secondary accounts for payroll, tax reserves, and specific departmental operations with unified login capability.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CPA & ACCOUNTING -->
+          <div class="tab-pane" id="tab-cpa">
+            <div class="tab-grid">
+              <div class="tab-info">
+                <h3 class="tab-pane-title">The Ultimate Suite for CPA & Financial Experts</h3>
+                <p class="tab-pane-desc">Built specifically to meet the strict legal, security, and administrative standards required by certified public accountants and high-end firms.</p>
+                <ul class="bullet-list">
+                  <li>Seamless accounting integration with major accounting softwares</li>
+                  <li>Dedicated partner-level support and single-point-of-contact advisors</li>
+                  <li>Fiduciary Escrow and client fund holding accounts with advanced security</li>
+                  <li>Read-only secure auditing portals for external compliance staff</li>
+                </ul>
+                <button class="btn btn-primary open-consultation-trigger">Access CPA Partnership Portal</button>
+              </div>
+              <div class="tab-cards-container">
+                <div class="feature-card-item">
+                  <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                      <circle cx="9" cy="7" r="4" />
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                  </div>
+                  <h4 class="feature-card-title">Fiduciary Protection</h4>
+                  <p class="feature-card-text">Client escrow holding workflows that guarantee safety and compliance with professional professional standards.</p>
+                </div>
+                <div class="feature-card-item">
+                  <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                      <polyline points="14 2 14 8 20 8" />
+                      <line x1="16" y1="13" x2="8" y2="13" />
+                      <line x1="16" y1="17" x2="8" y2="17" />
+                      <polyline points="10 9 9 9 8 9" />
+                    </svg>
+                  </div>
+                  <h4 class="feature-card-title">Direct Ledger Integration</h4>
+                  <p class="feature-card-text">Eliminate double manual reconciliation with bank-to-ledger pipelines that synchronize accounting balances securely.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PERSONAL & WEALTH -->
+          <div class="tab-pane" id="tab-personal">
+            <div class="tab-grid">
+              <div class="tab-info">
+                <h3 class="tab-pane-title">Sophisticated Private Banking</h3>
+                <p class="tab-pane-desc">Maximize personal assets with customized cash planning structures, bespoke lending services, and exceptional relationship-based support.</p>
+                <ul class="bullet-list">
+                  <li>High-Yield Personal Checking with ATM fee reimbursement worldwide</li>
+                  <li>Custom real estate lending facilities and asset-backed personal credit lines</li>
+                  <li>Consolidated personal and business portfolio financial statements</li>
+                  <li>Wealth management services and estate plan consultation support</li>
+                </ul>
+                <button class="btn btn-primary open-consultation-trigger">Inquire About Private Membership</button>
+              </div>
+              <div class="tab-cards-container">
+                <div class="feature-card-item">
+                  <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                    </svg>
+                  </div>
+                  <h4 class="feature-card-title">Institutional Security</h4>
+                  <p class="feature-card-text">Multifactor physical security tokens and transaction confirmation mechanisms to guard premium private accounts.</p>
+                </div>
+                <div class="feature-card-item">
+                  <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10" />
+                      <line x1="12" y1="8" x2="12" y2="16" />
+                      <line x1="8" y1="12" x2="16" y2="12" />
+                    </svg>
+                  </div>
+                  <h4 class="feature-card-title">Flexible Capital Liquidity</h4>
+                  <p class="feature-card-text">Access quick, custom structured short-term liquidity without liquidating your investments or portfolios.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- DIGITAL PLATFORMS -->
+          <div class="tab-pane" id="tab-digital">
+            <div class="tab-grid">
+              <div class="tab-info">
+                <h3 class="tab-pane-title">Next-Gen Secure Financial Management Portal</h3>
+                <p class="tab-pane-desc">Manage multi-million dollar balances with ease, issue security permissions to stakeholders, and perform transfers safely from any digital browser.</p>
+                <ul class="bullet-list">
+                  <li>Advanced role-based security configurations for personnel and audits</li>
+                  <li>Comprehensive API endpoints for automated financial pipelines</li>
+                  <li>Immediate security alerts, notification systems, and audit history log</li>
+                  <li>Federated hardware and passkey-based user authentication</li>
+                </ul>
+                <button class="btn btn-primary" id="tabDemoPortalBtn">Try Sandbox Dashboard Demo</button>
+              </div>
+              <div class="tab-cards-container">
+                <div class="feature-card-item">
+                  <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                      <line x1="2" y1="21" x2="22" y2="21" />
+                      <line x1="12" y1="17" x2="12" y2="21" />
+                    </svg>
+                  </div>
+                  <h4 class="feature-card-title">Consolidated Financial View</h4>
+                  <p class="feature-card-text">Bring together business accounts, investments, and lines of credit inside a clean digital desktop environment.</p>
+                </div>
+                <div class="feature-card-item">
+                  <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                      <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                      <line x1="12" y1="22.08" x2="12" y2="12" />
+                    </svg>
+                  </div>
+                  <h4 class="feature-card-title">Cryptographically Encrypted Logs</h4>
+                  <p class="feature-card-text">Protect the historical log of client activities from tampering with cryptographically secure audit registries.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INTERACTIVE TREASURY & CALCULATOR SECTION -->
+    <!-- Overcomes "Limited Product Visualization" & "Static Interaction Design" -->
+    <section class="interactive-calculator-section" id="calculator">
+      <div class="container">
+        <div class="calculator-wrapper">
+          <div class="calculator-info">
+            <div class="badge badge-alt">Interactive Planning Tool</div>
+            <h2 class="section-title">Treasury Yield & Efficiency Calculator</h2>
+            <p class="calc-p">CPAs and financial controllers consistently recommend Vercel Bank to boost return metrics and reduce the manual administration required to manage complex holdings.</p>
+            
+            <div class="calc-stat-box">
+              <div class="stat-num" id="calculatedYield">$54,200</div>
+              <p class="stat-lbl">Est. Annual Treasury Yield Boost (APY: 5.42%)</p>
+            </div>
+            <div class="calc-stat-box">
+              <div class="stat-num" id="calculatedHours">38 Hours</div>
+              <p class="stat-lbl">Estimated Administrative Reconciliation Hours Saved/Month</p>
+            </div>
+            
+            <p class="calc-disclaimer">*Calculations are for demonstration purposes based on premium client deposit yields. Past performance does not guarantee future results.</p>
+          </div>
+          <div class="calculator-card">
+            <h3 class="calc-card-title">Adjust Your Corporate Cash Profile</h3>
+            
+            <div class="input-group">
+              <div class="slider-header">
+                <label for="depositSlider">Average Monthly Corporate Deposits</label>
+                <span class="slider-val-bubble" id="depositValue">$1,000,000</span>
+              </div>
+              <input type="range" id="depositSlider" min="100000" max="10000000" step="100000" value="1000000" class="custom-slider">
+              <div class="slider-limits">
+                <span>$100K</span>
+                <span>$5.0M</span>
+                <span>$10.0M+</span>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <div class="slider-header">
+                <label for="subAccountSlider">Number of Client/Sub-Accounts Managed</label>
+                <span class="slider-val-bubble" id="subAccountValue">15 Accounts</span>
+              </div>
+              <input type="range" id="subAccountSlider" min="1" max="100" step="1" value="15" class="custom-slider">
+              <div class="slider-limits">
+                <span>1 Account</span>
+                <span>50 Accounts</span>
+                <span>100+ Accounts</span>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label class="checkbox-container">
+                <input type="checkbox" id="enableLedgerLink" checked>
+                <span class="checkmark"></span>
+                Enable Automated Direct Ledger Integration (Save 1.5 hrs per sub-account)
+              </label>
+            </div>
+
+            <div class="input-group">
+              <label class="checkbox-container">
+                <input type="checkbox" id="enableTreasurySweep" checked>
+                <span class="checkmark"></span>
+                Activate Smart High-Yield Treasury Sweep (Unlock premium 5.42% bracket)
+              </label>
+            </div>
+
+            <div class="calc-action-block">
+              <button class="btn btn-primary btn-full open-consultation-trigger">Apply for This Yield Structure</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISUAL PRODUCT DEMO INSIGHTS (Static interaction design fix) -->
+    <section class="dashboard-preview-section">
+      <div class="container">
+        <div class="preview-grid">
+          <div class="preview-visual-container">
+            <div class="dashboard-mockup">
+              <div class="mockup-header">
+                <div class="dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <span class="mockup-title">Vercel Bank Client Portal v4.22</span>
+              </div>
+              <div class="mockup-body">
+                <div class="mockup-sidebar">
+                  <div class="sb-item active"></div>
+                  <div class="sb-item"></div>
+                  <div class="sb-item"></div>
+                  <div class="sb-item"></div>
+                </div>
+                <div class="mockup-content">
+                  <div class="mockup-row">
+                    <div class="mockup-stat-card">
+                      <span class="m-lbl">TOTAL NET WORTH</span>
+                      <span class="m-val">$3,450,220.00</span>
+                    </div>
+                    <div class="mockup-stat-card highlight">
+                      <span class="m-lbl">MOCK TRANSFERS</span>
+                      <span class="m-val">ACTIVE SECURE</span>
+                    </div>
+                  </div>
+                  <div class="mockup-chart-box">
+                    <span class="chart-lbl">CPA Group Yield Trend</span>
+                    <div class="chart-bars">
+                      <div class="c-bar" style="--h: 30%"></div>
+                      <div class="c-bar" style="--h: 50%"></div>
+                      <div class="c-bar" style="--h: 45%"></div>
+                      <div class="c-bar" style="--h: 70%"></div>
+                      <div class="c-bar" style="--h: 90%"></div>
+                      <div class="c-bar" style="--h: 85%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="preview-text-container">
+            <div class="badge">Enterprise Control</div>
+            <h2 class="section-title">Unprecedented visibility into complex assets.</h2>
+            <p class="preview-desc">Our modern Client Portal bridges the divide between daily transactions and strategic advisory planning. View liquid reserves, track client trust funds, execute payroll sweeps, and access professional bank records in single-click exports.</p>
+            <div class="feature-checkpoints">
+              <div class="checkpoint-item">
+                <div class="chk-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <span>Advanced multi-factor physical and biometrical authentication structures.</span>
+              </div>
+              <div class="checkpoint-item">
+                <div class="chk-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <span>Customized client permission schemes for CPAs, partners, and finance assistants.</span>
+              </div>
+              <div class="checkpoint-item">
+                <div class="chk-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <span>Instantly generated formal balance sheets and audit-ready accounting packages.</span>
+              </div>
+            </div>
+            <button class="btn btn-secondary" id="previewDemoBtn">Launch Sandbox Portal</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISSION, VISION & VALUES SECTION -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle">Our Foundation</span>
+          <h2 class="section-title">Security. Integrity. Innovation.</h2>
+          <p class="section-lead">A conservative banking philosophy supported by next-generation financial architectures.</p>
+        </div>
+
+        <div class="about-mission-vision-grid">
+          <div class="vision-mission-card">
+            <div class="v-m-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            </div>
+            <h3>Our Mission</h3>
+            <p>To align traditional integrity and comprehensive regulatory security with advanced modern technology to empower business owners, CPA firms, and individuals to safely build long-term economic growth.</p>
+          </div>
+          <div class="vision-mission-card">
+            <div class="v-m-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            </div>
+            <h3>Our Vision</h3>
+            <p>To operate as the primary banking benchmark for professional services nationwide, delivering robust capital structures and automated reconciliation systems with a customer-centric advisory foundation.</p>
+          </div>
+        </div>
+
+        <!-- Core Values Row -->
+        <div class="core-values-section">
+          <h3 class="text-center core-values-header">Core Operating Values</h3>
+          <div class="values-grid">
+            <div class="value-item">
+              <div class="val-num">01</div>
+              <h4>Integrity</h4>
+              <p>Transparent protocols and strict ethical structures dictate every operational choice we make daily.</p>
+            </div>
+            <div class="value-item">
+              <div class="val-num">02</div>
+              <h4>Innovation</h4>
+              <p>Building high-end digital workflows that eliminate tedious manual administration and reconciliation tasks.</p>
+            </div>
+            <div class="value-item">
+              <div class="val-num">03</div>
+              <h4>Reliability</h4>
+              <p>We commit to constant platform uptime, dedicated phone support, and consistent transactional speed.</p>
+            </div>
+            <div class="value-item">
+              <div class="val-num">04</div>
+              <h4>Customer Focus</h4>
+              <p>Every account is coupled with professional support personnel who understand your business model.</p>
+            </div>
+            <div class="value-item">
+              <div class="val-num">05</div>
+              <h4>Excellence</h4>
+              <p>We adhere to high compliance benchmarks to ensure the flawless safety and execution of assets.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREDIBILITY & TRUST REINFORCEMENT -->
+    <section class="credibility-section" id="credibility">
+      <div class="container">
+        <div class="credibility-grid">
+          <div class="credibility-content">
+            <div class="badge badge-alt">Credibility Guarantee</div>
+            <h2 class="section-title">Decades of Trusted Financial Governance.</h2>
+            <p class="credibility-text">
+              At Vercel Bank, we believe that trust is won through performance and transparency. Unlike high-volatility financial networks, we preserve safe balance sheets, adhere strictly to regulatory standards, and prioritize low-risk cash management setups.
+            </p>
+            <div class="stat-row">
+              <div class="stat-box-mini">
+                <strong>30+ Years</strong>
+                <span>Combined Executive Trust</span>
+              </div>
+              <div class="stat-box-mini">
+                <strong>99.99%</strong>
+                <span>Transaction Delivery Rate</span>
+              </div>
+            </div>
+          </div>
+          <div class="credibility-testimonial-box">
+            <div class="quote-mark">“</div>
+            <p class="testimonial-quote">
+              "Partnering with Vercel Bank changed our firm's daily dynamics. Their client escrow account workflows saved us hundreds of manual compliance hours every single month, while our liquid reserves yield premium earnings safely."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <strong>Elizabeth Vance, CPA</strong>
+                <span>Managing Partner, Vance & Abernathy LLP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ ACCORDION SECTION -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle">Answering Your Questions</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-lead">Clear, direct responses outlining our technical structures, FDIC insurance, and partnership systems.</p>
+        </div>
+
+        <div class="faq-accordion-container">
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <span>Is Vercel Bank FDIC insured?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-content">
+              <p>Yes. Vercel Bank is a dedicated financial platform and member of the FDIC. Your deposits are eligible for FDIC coverage up to $250,000 per depositor, for each account ownership category. For larger corporate entities, we offer specialized multi-bank sweep facilities that extend coverage up to $5,000,000 through partner arrangements.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <span>How does Vercel Bank support CPA and accounting firms specifically?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-content">
+              <p>We provide accounting-specific account types such as fiduciary escrow accounts, IOLTA accounts, and secure automated multi-subaccount management layouts. Additionally, we support read-only auditor access links, automatic journal entry matching pipelines, and direct ledger sync options that dramatically speed up bookkeeping practices.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <span>What are the digital safety standards utilized by the institution?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-content">
+              <p>We leverage military-grade data protection, including TLS 1.3 encryption on all connections, secure dual-key client authentication protocols, and hardware token compatibility. Our internal system audit logs are written to unalterable storage, preventing security alteration or unauthorized ledger activities.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <span>How quickly can a new corporate account be established?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-content">
+              <p>Following a consultation session with our compliance professionals, documentation verification typically takes less than 24 business hours. Digital access token keys are dispatched immediately upon account approval, allowing corporate entities to begin treasury activities instantly.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <span>Do you support API-driven automated bank transactions?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-content">
+              <p>Yes, we offer modern banking-as-a-service (BaaS) and treasury API connections for enterprise tier accounts. This allows automated invoice payouts, payroll system integrations, and immediate programmatic cash flow alerts.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RELATIONSHIP ACQUISITION / CONTACT FORM -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-details-box">
+            <span class="badge">Connect With Advisors</span>
+            <h2>Initiate an Advisory Relationship</h2>
+            <p class="contact-explanation">
+              Whether you are an established CPA firm managing multi-client escrow portfolios or a corporate organization seeking robust treasury operations, our executive partners are ready to design a custom banking plan.
+            </p>
+            
+            <div class="contact-channel-item">
+              <div class="channel-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+              </div>
+              <div class="channel-text">
+                <strong>Dedicated Hotline</strong>
+                <span>+1 (800) 555-0199</span>
+              </div>
+            </div>
+
+            <div class="contact-channel-item">
+              <div class="channel-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </div>
+              <div class="channel-text">
+                <strong>Advisory Desk</strong>
+                <span>advisors@vercelbank.com</span>
+              </div>
+            </div>
+
+            <div class="contact-channel-item">
+              <div class="channel-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </div>
+              <div class="channel-text">
+                <strong>Headquarters Desk</strong>
+                <span>100 Financial Parkway, Ste 400, New York, NY</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-card">
+            <h3>Schedule Private Briefing</h3>
+            <form id="relationshipForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">First Name *</label>
+                  <input type="text" id="firstName" required>
+                  <span class="error-msg">Please enter your first name</span>
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name *</label>
+                  <input type="text" id="lastName" required>
+                  <span class="error-msg">Please enter your last name</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Business Email *</label>
+                <input type="email" id="email" required>
+                <span class="error-msg">Please enter a valid business email</span>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" required>
+                <span class="error-msg">Please enter your phone number</span>
+              </div>
+              <div class="form-group">
+                <label for="interest">Primary Service of Interest</label>
+                <select id="interest">
+                  <option value="cpa">CPA & Accounting Solutions</option>
+                  <option value="treasury">Business Treasury Management</option>
+                  <option value="lending">Corporate Financing / Lending</option>
+                  <option value="private">Private High-Yield Wealth</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Brief Project/Firm Context</label>
+                <textarea id="message" rows="4" placeholder="Tell us about your organization and asset management requirements..."></textarea>
+              </div>
+              
+              <button type="submit" class="btn btn-primary btn-full">Submit Consultation Request</button>
+            </form>
+            <div class="form-success-alert hidden" id="formSuccess">
+              <div class="success-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </div>
+              <div class="success-text">
+                <h4>Briefing Form Received</h4>
+                <p>One of our Executive Advisors will reach out to you within the next 2 business hours to review your requirements.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- INSTITUTIONAL COMPLIANT FOOTER -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand-column">
+        <div class="logo footer-logo">
+          <span class="logo-accent">VERCEL</span>
+          <span class="logo-main">BANK</span>
+        </div>
+        <p class="footer-tagline">Stable, modern, and highly compliant institutional banking architecture. Built to deliver structural capital reliability to corporations and CPA networks globally.</p>
+        <div class="fdic-shield">MEMBER FDIC</div>
+      </div>
+
+      <div class="footer-links-column">
+        <h4>Banking Products</h4>
+        <ul>
+          <li><a href="#">Business Checking</a></li>
+          <li><a href="#">High-Yield Treasury Sweep</a></li>
+          <li><a href="#">Fiduciary Escrow Solutions</a></li>
+          <li><a href="#">Commercial Real Estate Lines</a></li>
+          <li><a href="#">SBA Partnership Loans</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-column">
+        <h4>Governance & Safety</h4>
+        <ul>
+          <li><a href="#">System Safety Logs</a></li>
+          <li><a href="#">Compliance Auditing desk</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Patriot Act Statement</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-column">
+        <h4>Hours & Inquiries</h4>
+        <p class="footer-info-text"><strong>Business Hours:</strong> Monday – Friday<br>8:00 AM – 6:00 PM EST</p>
+        <p class="footer-info-text"><strong>Direct Wire Operations:</strong> Monday – Friday<br>9:00 AM – 4:30 PM EST</p>
+        <p class="footer-info-text"><strong>Direct Hotline support:</strong> +1 (800) 555-0199</p>
+      </div>
+    </div>
+
+    <!-- Regulatory assurance layer -->
+    <div class="container footer-legal-strip">
+      <p>© 2024 Vercel Bank. All rights reserved. Vercel Bank is a registered trademark and licensed corporate banking entity. Deposits are eligible for FDIC insurance coverage. Equal Housing Lender.</p>
+      <p class="disclaimer-text">The material provided on this portal is for structural business demonstration purposes only and does not represent direct financial, tax, legal, or transactional advice. Standard bank validation guidelines and security check measures apply to all registered commercial accounts.</p>
+    </div>
+  </footer>
+
+  <!-- MODAL: SIGN IN PANEL / CLIENT PORTAL DEMO (To avoid generic visual limitations and solve the dashboard deficit) -->
+  <div class="modal-backdrop" id="loginModal">
+    <div class="modal-box modal-login-box">
+      <button class="modal-close-btn" id="closeLoginBtn">&times;</button>
+      
+      <!-- LOGIN VIEW -->
+      <div class="login-form-view" id="loginFormView">
+        <div class="modal-header-section text-center">
+          <div class="lock-icon-container">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg>
+          </div>
+          <h3>Secure Client Portal Access</h3>
+          <p>Verify your client identity credentials to enter your active banking workspace.</p>
+        </div>
+
+        <div class="demo-credentials-banner">
+          <p><strong>Sandbox Demonstration Mode:</strong> Use credentials below for immediate entry:</p>
+          <p>User ID: <code id="demoUser">cpa_partner</code> | Password: <code id="demoPass">vercel123</code></p>
+        </div>
+
+        <form id="signinForm" novalidate>
+          <div class="form-group">
+            <label for="userId">User ID / Registered Email</label>
+            <input type="text" id="userId" placeholder="Enter User ID" value="cpa_partner" required>
+            <span class="error-msg">Please enter your registered user ID</span>
+          </div>
+          <div class="form-group">
+            <label for="password">Security Password</label>
+            <input type="password" id="password" placeholder="••••••••" value="vercel123" required>
+            <span class="error-msg">Please enter your secure password</span>
+          </div>
+          
+          <div class="login-utilities">
+            <label class="checkbox-container">
+              <input type="checkbox" checked>
+              <span class="checkmark"></span>
+              Remember my corporate ID
+            </label>
+            <a href="#" class="forgot-link" id="forgotPassLink">Reset Password?</a>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full btn-lg">Authorize Safe Connection</button>
+        </form>
+      </div>
+
+      <!-- MOCK CLIENT DASHBOARD VIEW (Interactive and complete) -->
+      <div class="dashboard-portal-view hidden" id="dashboardView">
+        <div class="portal-header">
+          <div class="portal-branding">
+            <span class="tag">SECURE WORKSPACE</span>
+            <h4>Vercel Bank Client Console</h4>
+          </div>
+          <button class="btn btn-outline btn-sm" id="logoutBtn">Terminate Session (Logout)</button>
+        </div>
+
+        <div class="portal-client-card">
+          <div class="client-meta">
+            <h5>VANCE &amp; ABERNATHY LLC</h5>
+            <span class="client-subhead">CPA Executive Admin Account</span>
+          </div>
+          <div class="sec-status-badge">
+            <span class="green-dot"></span> Encryption: TLS 1.3 Active
+          </div>
+        </div>
+
+        <!-- Balances and Interactive operations -->
+        <div class="portal-balances-grid">
+          <div class="balance-card">
+            <span class="bal-type">Active Operating Checking</span>
+            <span class="bal-amount" id="primaryBalance">$1,452,380.00</span>
+            <span class="bal-trend">+12.4% vs last month</span>
+          </div>
+          <div class="balance-card">
+            <span class="bal-type">CPA Escrow Trust Sweep</span>
+            <span class="bal-amount" id="secondaryBalance">$2,500,000.00</span>
+            <span class="bal-trend">APY: 5.42% Yield Applied</span>
+          </div>
+        </div>
+
+        <!-- Transaction Operations simulator -->
+        <div class="portal-interactive-area">
+          <div class="portal-operation-box">
+            <h5>Interactive Sandbox Transfer Simulator</h5>
+            <p class="op-instructions">Simulate client treasury routing instantly. Move liquidity between the escrow sweep pool and the central operating fund to test transaction verification ledger systems.</p>
+            
+            <form id="transferSimulatorForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Source Account</label>
+                  <select id="simSourceAccount">
+                    <option value="primary">Operating Checking ($1,452,380.00)</option>
+                    <option value="secondary">Escrow Trust Sweep ($2,500,000.00)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Amount to Route</label>
+                  <input type="number" id="simAmount" placeholder="e.g. 50000" min="1" max="1000000" required>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">Execute Secure Ledger Routing</button>
+            </form>
+          </div>
+
+          <!-- Ledger Audit Log -->
+          <div class="portal-audit-log">
+            <h5>Real-Time Security Audit Ledger</h5>
+            <p class="ledger-subhead">Every transaction is verified, timestamped, and stored on cryptographically locked blocks.</p>
+            <div class="audit-log-entries" id="auditLogs">
+              <div class="audit-entry">
+                <span class="entry-time">[SYSTEM START]</span>
+                <span class="entry-text">Secure session initiated. CPA authorized via hardware passkey authentication token.</span>
+              </div>
+              <div class="audit-entry">
+                <span class="entry-time">[10:14:02 AM]</span>
+                <span class="entry-text">System audit read link synchronized with external tax management system successfully.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: SCHEDULE CONSULTATION -->
+  <div class="modal-backdrop" id="consultationModal">
+    <div class="modal-box modal-consultation-box">
+      <button class="modal-close-btn" id="closeConsultationBtn">&times;</button>
+      <div class="modal-header-section text-center">
+        <div class="badge badge-alt">Executive Consultation Desk</div>
+        <h3>Establish Corporate Partnership</h3>
+        <p>Choose an initial consultation block. An executive account officer will initiate contact directly with your designated staff.</p>
+      </div>
+      <form id="consultationModalForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="modalFirstName">First Name *</label>
+            <input type="text" id="modalFirstName" required>
+            <span class="error-msg">Required</span>
+          </div>
+          <div class="form-group">
+            <label for="modalLastName">Last Name *</label>
+            <input type="text" id="modalLastName" required>
+            <span class="error-msg">Required</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="modalEmail">Company Email *</label>
+          <input type="email" id="modalEmail" required>
+          <span class="error-msg">Valid email required</span>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="meetingDate">Preferred Consultation Date</label>
+            <input type="date" id="meetingDate" required>
+          </div>
+          <div class="form-group">
+            <label for="meetingTime">Preferred Time (EST)</label>
+            <select id="meetingTime">
+              <option value="morning">Morning (09:00 AM - 11:30 AM)</option>
+              <option value="midday">Midday (12:00 PM - 02:30 PM)</option>
+              <option value="afternoon">Afternoon (03:00 PM - 05:30 PM)</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full btn-lg">Confirm Scheduled Appointment Block</button>
+      </form>
+
+      <div class="form-success-alert hidden" id="modalConsultationSuccess">
+        <div class="success-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+        </div>
+        <div class="success-text">
+          <h4>Consultation Slotted Successfully</h4>
+          <p>A calendar secure invite has been dispatched to your company email address. We look forward to analyzing your financial setups.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
