@@ -11,39 +11,59 @@
 </head>
 <body>
 
-  <!-- TOP ALERT BANNER -->
-  <div class="top-bar">
-    <div class="container top-bar-content">
-      <span class="status-indicator"><span class="dot"></span> Secure Digital Banking Active</span>
-      <span class="compliance-text">Member FDIC • Equal Housing Lender • End-to-End Encryption</span>
-    </div>
-  </div>
+  <!-- MOBILE MENU BACKDROP OVERLAY -->
+  <div class="menu-backdrop" id="menuBackdrop"></div>
 
   <!-- MAIN NAVIGATION -->
   <header class="main-header">
     <div class="container nav-container">
+      
+      <!-- Hamburger Menu (Left on Mobile) -->
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Logo -->
       <a href="#" class="logo">
         <span class="logo-accent">VERCEL</span>
         <span class="logo-main">BANK</span>
       </a>
       
-      <!-- Nav Links & Mobile Dropdown Card -->
+      <!-- Slide-Out Side Drawer Menu (Mobile) / Standard Nav (Desktop) -->
       <nav class="nav-links" id="navLinks">
-        <a href="#home" class="nav-link">Home</a>
-        <a href="#about" class="nav-link">About Us</a>
-        <a href="#services" class="nav-link">Services</a>
-        <a href="#careers" class="nav-link">Careers</a>
-        <a href="#contact" class="nav-link">Contact Us</a>
-        <button class="btn btn-primary btn-full mobile-login-btn">Login</button>
+        <div class="drawer-header">
+          <a href="#" class="logo drawer-logo">
+            <span class="logo-accent">VERCEL</span><span class="logo-main">BANK</span>
+          </a>
+          <button class="close-drawer" id="closeDrawerBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+
+        <div class="drawer-search">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" placeholder="Search">
+        </div>
+
+        <div class="drawer-items">
+          <a href="#home" class="nav-link">Home <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
+          <a href="#about" class="nav-link">About Us <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
+          <a href="#services" class="nav-link">Checking & Savings <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
+          <a href="#services" class="nav-link">Credit cards <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
+          <a href="#services" class="nav-link">Home loans <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
+          <a href="#services" class="nav-link">Investing & Wealth <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
+          
+          <div class="drawer-category">Connect with us</div>
+          <a href="#contact" class="nav-link">Schedule a meeting <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
+          <a href="#contact" class="nav-link">Customer service <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
+        </div>
       </nav>
 
+      <!-- Sign In Action -->
       <div class="nav-actions">
-        <button class="btn btn-primary desktop-login-btn">Login</button>
-        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <button class="btn btn-primary sign-in-btn" id="openLoginBtn">Sign in</button>
       </div>
     </div>
   </header>
@@ -65,443 +85,67 @@
       </div>
     </section>
 
-    <!-- OUR SERVICES -->
-    <section class="ecosystem-section" id="services">
+    <!-- CHOOSE WHAT'S RIGHT FOR YOU GRID -->
+    <section class="quick-links-section" id="services">
       <div class="container">
-        <div class="section-header text-center">
-          <span class="section-subtitle">Our Services</span>
-          <h2 class="section-title">Everything You Need to Bank with Confidence</h2>
-          <p class="section-lead">Whether you're managing personal finances or running a business, Vercel Bank provides the essential banking services you need through one secure platform.</p>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.75rem;">
+        <h2 class="quick-links-title">Choose what's right for you</h2>
+        
+        <div class="quick-links-grid">
           
-          <div class="feature-card-item">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            </div>
-            <h4 class="feature-card-title">Personal Banking</h4>
-            <p class="feature-card-text">Checking and savings accounts with secure online and mobile banking.</p>
-          </div>
+          <!-- Business -->
+          <a href="#" class="quick-link-item">
+            <svg class="quick-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            <span class="quick-link-text">Business</span>
+          </a>
 
-          <div class="feature-card-item">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-            </div>
-            <h4 class="feature-card-title">Business Banking</h4>
-            <p class="feature-card-text">Business accounts, payment solutions, and cash management tools for growing companies.</p>
-          </div>
+          <!-- Credit cards -->
+          <a href="#" class="quick-link-item">
+            <svg class="quick-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line><rect x="4" y="13" width="3" height="2" rx="0.5"></rect></svg>
+            <span class="quick-link-text">Credit cards</span>
+          </a>
 
-          <div class="feature-card-item">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-            </div>
-            <h4 class="feature-card-title">Cards & Payments</h4>
-            <p class="feature-card-text">Debit cards, secure payments, and digital wallet compatibility.</p>
-          </div>
+          <!-- Checking -->
+          <a href="#" class="quick-link-item">
+            <svg class="quick-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="1"></rect><line x1="16" y1="12" x2="20" y2="12"></line><rect x="4" y="9" width="4" height="3" rx="0.5"></rect></svg>
+            <span class="quick-link-text">Checking</span>
+          </a>
 
-          <div class="feature-card-item">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            </div>
-            <h4 class="feature-card-title">International Transfers</h4>
-            <p class="feature-card-text">Fast and secure domestic and international money transfers.</p>
-          </div>
+          <!-- Travel -->
+          <a href="#" class="quick-link-item">
+            <svg class="quick-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-.5-.5-2.5 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.2-1.1.7l-1.3 2.6c-.2.4-.1.9.3 1.1L9 14l-4 4-2.5-1.5c-.4-.2-.9-.2-1.3.1l-1 1c-.3.3-.3.8 0 1.1l4 4c.3.3.8.3 1.1 0l1-1c.3-.4.3-.9.1-1.3L5 19l4-4 3.4 6.3c.2.4.7.5 1.1.3l2.6-1.3c.5-.2.8-.6.7-1.1z"/></svg>
+            <span class="quick-link-text">Travel</span>
+          </a>
 
-          <div class="feature-card-item">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-            </div>
-            <h4 class="feature-card-title">Loans & Financing</h4>
-            <p class="feature-card-text">Personal and business financing designed to support your financial goals.</p>
-          </div>
+          <!-- Savings -->
+          <a href="#" class="quick-link-item">
+            <svg class="quick-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h3v2h4v-4c1-.5 1.7-1 2-2h2v-4h-2c0-1-.5-1.5-1-2h0V5z"/><path d="M2 9v1c0 1.1.9 2 2 2h1"/><circle cx="15" cy="11" r="1"/></svg>
+            <span class="quick-link-text">Savings</span>
+          </a>
 
-          <div class="feature-card-item">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-            </div>
-            <h4 class="feature-card-title">Online Banking</h4>
-            <p class="feature-card-text">Access your accounts, monitor transactions, pay bills, and manage your finances from anywhere.</p>
-          </div>
+          <!-- Home loans -->
+          <a href="#" class="quick-link-item">
+            <svg class="quick-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <span class="quick-link-text">Home loans</span>
+          </a>
 
-        </div>
-      </div>
-    </section>
+          <!-- Investing -->
+          <a href="#" class="quick-link-item">
+            <svg class="quick-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><path d="M3 15h4l3-3 3 3 8-8"></path><polyline points="16 7 21 7 21 12"></polyline></svg>
+            <span class="quick-link-text">Investing</span>
+          </a>
 
-    <!-- WHY CHOOSE VERCEL BANK -->
-    <section class="credibility-section" id="why-vercel" style="background-color: var(--color-bg-alt);">
-      <div class="container">
-        <div class="section-header text-center">
-          <span class="section-subtitle">Why Choose Us</span>
-          <h2 class="section-title">Built Around Security, Simplicity and Trust</h2>
-        </div>
+          <!-- Commercial -->
+          <a href="#" class="quick-link-item">
+            <svg class="quick-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg>
+            <span class="quick-link-text">Commercial</span>
+          </a>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.75rem;">
-          
-          <div class="feature-card-item" style="background: white;">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <h4 class="feature-card-title">Enterprise Security</h4>
-            <p class="feature-card-text">Advanced security technologies help protect every account and transaction.</p>
-          </div>
+          <!-- Schedule a meeting -->
+          <a href="#" class="quick-link-item">
+            <svg class="quick-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path><path d="M19 8h-2M19 11h-2"></path></svg>
+            <span class="quick-link-text">Schedule a meeting</span>
+          </a>
 
-          <div class="feature-card-item" style="background: white;">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <h4 class="feature-card-title">Fast Banking</h4>
-            <p class="feature-card-text">Complete everyday banking tasks quickly through our digital platform.</p>
-          </div>
-
-          <div class="feature-card-item" style="background: white;">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            </div>
-            <h4 class="feature-card-title">Reliable Support</h4>
-            <p class="feature-card-text">Our support team is available whenever you need assistance.</p>
-          </div>
-
-          <div class="feature-card-item" style="background: white;">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
-            </div>
-            <h4 class="feature-card-title">Modern Technology</h4>
-            <p class="feature-card-text">Powerful banking tools designed for today's financial needs.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT VERCEL BANK & VALUES -->
-    <section class="about-section" id="about">
-      <div class="container">
-        <div class="section-header text-center">
-          <span class="section-subtitle">About Vercel Bank</span>
-          <h2 class="section-title">A Modern Bank Built Around Your Financial Future</h2>
-          <p class="section-lead">Vercel Bank combines trusted banking principles with modern technology to deliver a secure, reliable, and convenient banking experience. We focus on making banking simple while maintaining the highest standards of security and customer service.</p>
-        </div>
-
-        <div class="about-mission-vision-grid">
-          <div class="vision-mission-card">
-            <div class="v-m-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
-              </svg>
-            </div>
-            <h3>Our Mission</h3>
-            <p>To provide secure, accessible, and innovative banking solutions that help individuals and businesses achieve financial confidence.</p>
-          </div>
-          <div class="vision-mission-card">
-            <div class="v-m-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z" /><circle cx="12" cy="12" r="3" />
-              </svg>
-            </div>
-            <h3>Our Vision</h3>
-            <p>To become a trusted digital banking partner recognized for innovation, security, and exceptional customer experience.</p>
-          </div>
-        </div>
-
-        <!-- Core Values Row -->
-        <div class="core-values-section">
-          <h3 class="text-center core-values-header">Our Values</h3>
-          <div class="values-grid">
-            <div class="value-item">
-              <div class="val-num">01</div>
-              <h4>Integrity</h4>
-              <p>We operate with honesty and transparency.</p>
-            </div>
-            <div class="value-item">
-              <div class="val-num">02</div>
-              <h4>Security</h4>
-              <p>Protecting customer information is our highest priority.</p>
-            </div>
-            <div class="value-item">
-              <div class="val-num">03</div>
-              <h4>Innovation</h4>
-              <p>We continuously improve our digital banking experience.</p>
-            </div>
-            <div class="value-item">
-              <div class="val-num">04</div>
-              <h4>Reliability</h4>
-              <p>Customers can depend on us every day.</p>
-            </div>
-            <div class="value-item">
-              <div class="val-num">05</div>
-              <h4>Customer First</h4>
-              <p>Every decision begins with the customer.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ONLINE BANKING PREVIEW -->
-    <section class="dashboard-preview-section" id="online-banking">
-      <div class="container">
-        <div class="preview-grid">
-          <div class="preview-visual-container">
-            <div class="dashboard-mockup">
-              <div class="mockup-header">
-                <div class="dots"><span></span><span></span><span></span></div>
-                <span class="mockup-title">Vercel Bank Online Dashboard</span>
-              </div>
-              <div class="mockup-body">
-                <div class="mockup-sidebar">
-                  <div class="sb-item active"></div>
-                  <div class="sb-item"></div>
-                  <div class="sb-item"></div>
-                  <div class="sb-item"></div>
-                </div>
-                <div class="mockup-content">
-                  <div class="mockup-row">
-                    <div class="mockup-stat-card">
-                      <span class="m-lbl">TOTAL BALANCE</span>
-                      <span class="m-val">$42,850.00</span>
-                    </div>
-                    <div class="mockup-stat-card highlight">
-                      <span class="m-lbl">STATUS</span>
-                      <span class="m-val">SECURE ACTIVE</span>
-                    </div>
-                  </div>
-                  <div class="mockup-chart-box">
-                    <span class="chart-lbl">Monthly Overview</span>
-                    <div class="chart-bars">
-                      <div class="c-bar" style="--h: 30%"></div>
-                      <div class="c-bar" style="--h: 50%"></div>
-                      <div class="c-bar" style="--h: 45%"></div>
-                      <div class="c-bar" style="--h: 70%"></div>
-                      <div class="c-bar" style="--h: 90%"></div>
-                      <div class="c-bar" style="--h: 85%"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="preview-text-container">
-            <div class="badge">Online Banking</div>
-            <h2 class="section-title">Bank Wherever Life Takes You</h2>
-            <p class="preview-desc">Access your accounts securely from desktop, tablet, or mobile. View balances, transfer money, pay bills, monitor transactions, and manage your finances with confidence.</p>
-            
-            <div class="feature-checkpoints">
-              <div class="checkpoint-item">
-                <div class="chk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12" /></svg></div>
-                <span>Account Dashboard</span>
-              </div>
-              <div class="checkpoint-item">
-                <div class="chk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12" /></svg></div>
-                <span>Secure Transfers & Bill Payments</span>
-              </div>
-              <div class="checkpoint-item">
-                <div class="chk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12" /></svg></div>
-                <span>Transaction History & Notifications</span>
-              </div>
-            </div>
-            
-            <button class="btn btn-secondary open-consultation-trigger" style="margin-top: 1rem;">Open an Account</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECURITY SECTION -->
-    <section class="interactive-calculator-section" id="security">
-      <div class="container">
-        <div class="preview-grid">
-          <div class="preview-text-container">
-            <div class="badge badge-alt">Protection</div>
-            <h2 class="section-title">Security You Can Trust</h2>
-            <p class="preview-desc">Your financial information is protected using modern security technologies and continuous monitoring designed to safeguard your accounts.</p>
-            
-            <div class="feature-checkpoints">
-              <div class="checkpoint-item">
-                <div class="chk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12" /></svg></div>
-                <span>Multi-Factor Authentication</span>
-              </div>
-              <div class="checkpoint-item">
-                <div class="chk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12" /></svg></div>
-                <span>End-to-End Encryption</span>
-              </div>
-              <div class="checkpoint-item">
-                <div class="chk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12" /></svg></div>
-                <span>Fraud Monitoring</span>
-              </div>
-              <div class="checkpoint-item">
-                <div class="chk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12" /></svg></div>
-                <span>Secure Login Protection</span>
-              </div>
-              <div class="checkpoint-item">
-                <div class="chk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12" /></svg></div>
-                <span>24/7 Account Monitoring</span>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Visual Shield Box -->
-          <div class="credibility-testimonial-box" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-blue)" stroke-width="1.5" style="width: 80px; height: 80px; margin-bottom: 1.5rem;">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-            </svg>
-            <h3 style="color: white; font-size: 1.5rem; margin-bottom: 0.5rem;">Fully Encrypted</h3>
-            <p style="color: var(--color-slate-400); font-size: 0.9rem;">Protected by advanced TLS 1.3 standards</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ ACCORDION SECTION -->
-    <section class="faq-section" id="faq" style="background-color: var(--color-bg-alt);">
-      <div class="container">
-        <div class="section-header text-center">
-          <span class="section-subtitle">Support</span>
-          <h2 class="section-title">FAQ</h2>
-        </div>
-
-        <div class="faq-accordion-container">
-          <div class="faq-item">
-            <button class="faq-trigger">
-              <span>How do I open an account?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-content">
-              <p>You can apply online in just a few minutes through our secure digital application platform.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-trigger">
-              <span>Can I bank online?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-content">
-              <p>Yes. Online and mobile banking are available 24/7 from any device.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-trigger">
-              <span>Are my deposits protected?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-content">
-              <p>Eligible deposits are protected in accordance with applicable banking regulations, including FDIC insurance.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-trigger">
-              <span>Can I transfer money internationally?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-content">
-              <p>Yes. Both domestic and international secure transfers are fully supported from your dashboard.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-trigger">
-              <span>How do I contact support?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-content">
-              <p>Our customer support team is available by phone, email, and secure messaging within the online portal.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section class="contact-section" id="contact">
-      <div class="container">
-        <div class="contact-grid">
-          <div class="contact-details-box">
-            <span class="badge">Contact Us</span>
-            <h2 class="section-title">We're Here to Help</h2>
-            <p class="contact-explanation">
-              Have questions about our banking services? Our team is ready to assist you.
-            </p>
-            
-            <div class="contact-channel-item">
-              <div class="channel-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                  <polyline points="22,6 12,13 2,6" />
-                </svg>
-              </div>
-              <div class="channel-text">
-                <strong>Customer Support</strong>
-                <span>support@vercelbank.com</span>
-              </div>
-            </div>
-
-            <div class="contact-channel-item">
-              <div class="channel-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                </svg>
-              </div>
-              <div class="channel-text">
-                <strong>Phone</strong>
-                <span>+1 (800) 555-0123</span>
-              </div>
-            </div>
-
-            <div class="contact-channel-item">
-              <div class="channel-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-                </svg>
-              </div>
-              <div class="channel-text">
-                <strong>Business Hours</strong>
-                <span>Monday–Friday | 9:00 AM – 6:00 PM</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="contact-form-card">
-            <h3>Send us a message</h3>
-            <form id="relationshipForm" novalidate>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="firstName">First Name</label>
-                  <input type="text" id="firstName" required>
-                  <span class="error-msg">Please enter your first name</span>
-                </div>
-                <div class="form-group">
-                  <label for="lastName">Last Name</label>
-                  <input type="text" id="lastName" required>
-                  <span class="error-msg">Please enter your last name</span>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" required>
-                <span class="error-msg">Please enter a valid email</span>
-              </div>
-              <div class="form-group">
-                <label for="message">How can we help you?</label>
-                <textarea id="message" rows="5" placeholder="Write your message here..."></textarea>
-              </div>
-              
-              <button type="submit" class="btn btn-primary btn-full btn-lg">Submit Message</button>
-            </form>
-            <div class="form-success-alert hidden" id="formSuccess">
-              <div class="success-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-              </div>
-              <div class="success-text">
-                <h4>Message Received</h4>
-                <p>Our support team will reach out to you shortly.</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -517,140 +161,28 @@
         </div>
         <p class="footer-tagline">Secure digital banking for individuals and businesses.</p>
       </div>
-
       <div class="footer-links-column">
         <h4>Quick Links</h4>
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#services">Personal Banking</a></li>
           <li><a href="#services">Business Banking</a></li>
-          <li><a href="#online-banking">Online Banking</a></li>
         </ul>
       </div>
-
       <div class="footer-links-column">
         <h4>Information</h4>
         <ul>
           <li><a href="#security">Security</a></li>
           <li><a href="#contact">Support</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="#faq">FAQ</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-links-column">
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms & Conditions</a></li>
-          <li><a href="#">Accessibility</a></li>
-          <li><a href="#">Compliance</a></li>
         </ul>
       </div>
     </div>
-
-    <!-- Regulatory assurance layer -->
     <div class="container footer-legal-strip">
       <p>© 2026 Vercel Bank. All rights reserved.</p>
       <p class="disclaimer-text">Equal Housing Lender. Member FDIC. Deposits are insured up to applicable legal limits.</p>
     </div>
   </footer>
-
-  <!-- MODAL: SIGN IN PANEL -->
-  <div class="modal-backdrop" id="loginModal">
-    <div class="modal-box modal-login-box">
-      <button class="modal-close-btn" id="closeLoginBtn">&times;</button>
-      
-      <!-- LOGIN VIEW -->
-      <div class="login-form-view" id="loginFormView">
-        <div class="modal-header-section text-center">
-          <div class="lock-icon-container">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-            </svg>
-          </div>
-          <h3>Secure Online Banking</h3>
-          <p>Sign in to manage your accounts.</p>
-        </div>
-
-        <form id="signinForm" novalidate>
-          <div class="form-group">
-            <label for="userId">Username / Email</label>
-            <input type="text" id="userId" placeholder="Enter Username" required>
-            <span class="error-msg">Please enter your username</span>
-          </div>
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" id="password" placeholder="••••••••" required>
-            <span class="error-msg">Please enter your secure password</span>
-          </div>
-          
-          <div class="login-utilities">
-            <label class="checkbox-container">
-              <input type="checkbox">
-              <span class="checkmark"></span>
-              Remember me
-            </label>
-            <a href="#" class="forgot-link" id="forgotPassLink">Reset Password?</a>
-          </div>
-
-          <button type="submit" class="btn btn-primary btn-full btn-lg">Sign In</button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <!-- MODAL: OPEN ACCOUNT -->
-  <div class="modal-backdrop" id="consultationModal">
-    <div class="modal-box modal-consultation-box">
-      <button class="modal-close-btn" id="closeConsultationBtn">&times;</button>
-      <div class="modal-header-section text-center">
-        <div class="badge badge-alt">Open an Account</div>
-        <h3>Start Banking With Us</h3>
-        <p>Provide your basic details, and our team will guide you through the secure setup process.</p>
-      </div>
-      <form id="consultationModalForm" novalidate>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="modalFirstName">First Name *</label>
-            <input type="text" id="modalFirstName" required>
-            <span class="error-msg">Required</span>
-          </div>
-          <div class="form-group">
-            <label for="modalLastName">Last Name *</label>
-            <input type="text" id="modalLastName" required>
-            <span class="error-msg">Required</span>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="modalEmail">Email Address *</label>
-          <input type="email" id="modalEmail" required>
-          <span class="error-msg">Valid email required</span>
-        </div>
-        <div class="form-group">
-            <label for="meetingTime">Account Type</label>
-            <select id="meetingTime">
-              <option value="personal">Personal Account</option>
-              <option value="business">Business Account</option>
-            </select>
-        </div>
-        <button type="submit" class="btn btn-primary btn-full btn-lg">Submit Application</button>
-      </form>
-
-      <div class="form-success-alert hidden" id="modalConsultationSuccess">
-        <div class="success-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-            <polyline points="20 6 9 17 4 12" />
-          </svg>
-        </div>
-        <div class="success-text">
-          <h4>Application Received</h4>
-          <p>We've sent an email with the next steps to securely verify your identity.</p>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <script src="app.js"></script>
 </body>
