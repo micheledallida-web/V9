@@ -26,16 +26,19 @@
         <span class="logo-accent">VERCEL</span>
         <span class="logo-main">BANK</span>
       </a>
+      
+      <!-- Nav Links & Mobile Dropdown Card -->
       <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About Us</a>
         <a href="#services" class="nav-link">Services</a>
-        <a href="#why-vercel" class="nav-link">Why Us</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#online-banking" class="nav-link">Online Banking</a>
-        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="#careers" class="nav-link">Careers</a>
+        <a href="#contact" class="nav-link">Contact Us</a>
+        <button class="btn btn-primary btn-full mobile-login-btn">Login</button>
       </nav>
+
       <div class="nav-actions">
-        <button class="btn btn-secondary" id="openLoginBtn">Sign In</button>
-        <button class="btn btn-primary" id="openConsultationBtn">Open an Account</button>
+        <button class="btn btn-primary desktop-login-btn">Login</button>
         <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
           <span></span>
           <span></span>
@@ -46,82 +49,17 @@
   </header>
 
   <main>
-    <!-- HERO SECTION -->
-    <section class="hero">
-      <div class="container hero-grid">
+    <!-- FULL BLEED BACKGROUND HERO SECTION -->
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content-wrapper">
         <div class="hero-content">
-          <div class="badge">Trusted Digital Banking</div>
-          <h1 class="hero-title">Banking Built for Modern Businesses and Everyday Banking</h1>
+          <h1 class="hero-title">Banking made simple,<br>secure, and seamless.</h1>
           <p class="hero-description">
-            Vercel Bank delivers secure digital banking designed for individuals and businesses. Manage your accounts, transfer funds, make payments, and access your finances anytime through a secure and reliable banking platform.
+            Manage your money, transfer funds, and grow your savings — all in one powerful app designed for your financial freedom.
           </p>
           <div class="hero-ctas">
-            <button class="btn btn-primary btn-lg" id="heroConsultationBtn">Open an Account</button>
-            <button class="btn btn-outline btn-lg" id="previewDemoBtn">Online Banking</button>
-          </div>
-          <div class="hero-trust-indicators">
-            <div class="trust-indicator-item">
-              <strong>Protected</strong>
-              <span>FDIC Insured</span>
-            </div>
-            <div class="trust-divider"></div>
-            <div class="trust-indicator-item">
-              <strong>Encrypted</strong>
-              <span>Bank-Level Security</span>
-            </div>
-            <div class="trust-divider"></div>
-            <div class="trust-indicator-item">
-              <strong>Available</strong>
-              <span>24/7 Digital Banking</span>
-            </div>
-            <div class="trust-divider"></div>
-            <div class="trust-indicator-item">
-              <strong>Reliable</strong>
-              <span>Trusted Support</span>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Hero Visuals -->
-        <div class="hero-visual">
-          <div class="visual-card-wrapper">
-            <div class="secure-shield-pulse">
-              <div class="shield-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                </svg>
-              </div>
-            </div>
-            <div class="floating-banking-card">
-              <div class="card-header-v">
-                <span class="brand">VERCEL BANK</span>
-                <span class="chip"></span>
-              </div>
-              <div class="card-body-v">
-                <p class="card-label">SECURE CLIENT</p>
-                <p class="card-number">•••• •••• •••• 8821</p>
-              </div>
-              <div class="card-footer-v">
-                <span>DIGITAL PREFERRED</span>
-                <span class="logo-icon-s">VB</span>
-              </div>
-            </div>
-            <div class="live-indicator-card">
-              <div class="live-indicator-header">
-                <span class="live-dot"></span>
-                <span class="live-label">System Status</span>
-              </div>
-              <div class="live-metric">
-                <span class="metric-label">Network Encryption</span>
-                <span class="metric-value">Active</span>
-              </div>
-              <div class="live-bar-graph">
-                <div class="bar" style="height: 40%"></div>
-                <div class="bar" style="height: 65%"></div>
-                <div class="bar" style="height: 85%"></div>
-                <div class="bar" style="height: 100%"></div>
-              </div>
-            </div>
+            <button class="btn btn-pill">Get Started</button>
           </div>
         </div>
       </div>
@@ -415,7 +353,7 @@
     </section>
 
     <!-- FAQ ACCORDION SECTION -->
-    <section class="faq-section" id="faq">
+    <section class="faq-section" id="faq" style="background-color: var(--color-bg-alt);">
       <div class="container">
         <div class="section-header text-center">
           <span class="section-subtitle">Support</span>
