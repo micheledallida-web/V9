@@ -2322,3 +2322,35 @@ a {
     width: 200px;
   }
 }
+/* ==========================================================================
+   MOBILE HEADER FIXES
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* 1. Hide the desktop buttons so the hamburger menu has room */
+  .nav-actions .btn {
+    display: none;
+  }
+  
+  /* 2. Ensure the top security bar text wraps or stacks instead of breaking the layout */
+  .top-bar-content {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  /* 3. Scale down the top bar text slightly for smaller screens */
+  .status-indicator, 
+  .compliance-text {
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+}
+
+/* For extremely small phones, you can hide the compliance text entirely to save space */
+@media (max-width: 576px) {
+  .compliance-text {
+    display: none;
+  }
+}
+
